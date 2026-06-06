@@ -1,0 +1,571 @@
+{
+  "recipes": [
+    {
+      "id": 1,
+      "title": "Bowl mediterranea con ceci croccanti",
+      "category": "Pranzo",
+      "cuisine": "Mediterranea",
+      "difficulty": "facile",
+      "time": 28,
+      "servings": 2,
+      "status": "pubblicata",
+      "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1200&q=80",
+      "description": "Una bowl colorata e leggera con verdure fresche, hummus e ceci speziati.",
+      "ingredients": [
+        "240 g ceci cotti",
+        "1 cetriolo",
+        "12 pomodorini",
+        "80 g hummus",
+        "paprika, olio e sale"
+      ],
+      "steps": [
+        "Condisci i ceci con olio, paprika e sale.",
+        "Scaldali in padella finche diventano croccanti.",
+        "Taglia le verdure e componi la bowl con hummus e ceci."
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Pasta cremosa al limone e basilico",
+      "category": "Cena",
+      "cuisine": "Italiana",
+      "difficulty": "facile",
+      "time": 22,
+      "servings": 2,
+      "status": "pubblicata",
+      "image": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=1200&q=80",
+      "description": "Un primo veloce, profumato e perfetto quando vuoi qualcosa di comfort ma fresco.",
+      "ingredients": [
+        "180 g pasta",
+        "1 limone non trattato",
+        "40 g parmigiano",
+        "basilico fresco",
+        "olio, sale e pepe"
+      ],
+      "steps": [
+        "Cuoci la pasta in acqua salata.",
+        "Emulsiona olio, scorza di limone, succo e parmigiano.",
+        "Manteca la pasta con poca acqua di cottura e basilico."
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Pancake proteici alla banana",
+      "category": "Colazione",
+      "cuisine": "Healthy",
+      "difficulty": "facile",
+      "time": 18,
+      "servings": 2,
+      "status": "pubblicata",
+      "image": "https://images.unsplash.com/photo-1528207776546-365bb710ee93?auto=format&fit=crop&w=1200&q=80",
+      "description": "Pancake morbidi con banana, yogurt e avena, ideali per una colazione sostanziosa.",
+      "ingredients": [
+        "1 banana matura",
+        "2 uova",
+        "60 g fiocchi d'avena",
+        "80 g yogurt greco",
+        "cannella"
+      ],
+      "steps": [
+        "Frulla banana, uova, avena e cannella.",
+        "Cuoci piccole porzioni in una padella antiaderente.",
+        "Servi con yogurt greco e frutta fresca."
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Tacos vegetariani con salsa yogurt",
+      "category": "Cena",
+      "cuisine": "Messicana",
+      "difficulty": "media",
+      "time": 35,
+      "servings": 3,
+      "status": "pubblicata",
+      "image": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=1200&q=80",
+      "description": "Tacos speziati con fagioli, mais, avocado e una salsa fresca allo yogurt.",
+      "ingredients": [
+        "6 tortillas",
+        "200 g fagioli neri",
+        "120 g mais",
+        "1 avocado",
+        "yogurt, lime e coriandolo"
+      ],
+      "steps": [
+        "Scalda fagioli e mais con spezie a piacere.",
+        "Prepara la salsa con yogurt, lime e coriandolo.",
+        "Farcisci le tortillas con verdure, avocado e salsa."
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Insalata di riso venere e salmone",
+      "category": "Pranzo",
+      "cuisine": "Fusion",
+      "difficulty": "media",
+      "time": 40,
+      "servings": 2,
+      "status": "pubblicata",
+      "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1200&q=80",
+      "description": "Un piatto completo con riso venere, salmone, edamame e verdure croccanti.",
+      "ingredients": [
+        "160 g riso venere",
+        "180 g salmone",
+        "100 g edamame",
+        "carote e zucchine",
+        "salsa di soia"
+      ],
+      "steps": [
+        "Cuoci il riso venere e lascialo intiepidire.",
+        "Scottare il salmone e tagliarlo a cubi.",
+        "Unisci verdure, edamame e salsa di soia."
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Curry veloce di lenticchie rosse",
+      "category": "Cena",
+      "cuisine": "Indiana",
+      "difficulty": "facile",
+      "time": 32,
+      "servings": 4,
+      "status": "pubblicata",
+      "image": "https://images.unsplash.com/photo-1604909052743-94e838986d24?auto=format&fit=crop&w=1200&q=80",
+      "description": "Curry cremoso e speziato, pronto in poco tempo e perfetto anche per meal prep.",
+      "ingredients": [
+        "220 g lenticchie rosse",
+        "300 ml latte di cocco",
+        "passata di pomodoro",
+        "curry e curcuma",
+        "riso basmati"
+      ],
+      "steps": [
+        "Tosta le spezie con un filo d'olio.",
+        "Aggiungi lenticchie, passata e latte di cocco.",
+        "Cuoci finche le lenticchie sono morbide e servi con riso."
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Cheesecake al bicchiere",
+      "category": "Dessert",
+      "cuisine": "Internazionale",
+      "difficulty": "facile",
+      "time": 20,
+      "servings": 4,
+      "status": "pubblicata",
+      "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=1200&q=80",
+      "description": "Dessert senza cottura con crema allo yogurt, biscotti e coulis di frutti rossi.",
+      "ingredients": [
+        "160 g biscotti secchi",
+        "220 g yogurt greco",
+        "120 g formaggio spalmabile",
+        "frutti rossi",
+        "miele"
+      ],
+      "steps": [
+        "Sbriciola i biscotti nei bicchieri.",
+        "Mescola yogurt, formaggio e miele.",
+        "Alterna crema e frutti rossi, poi lascia riposare."
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Risotto zucca e rosmarino",
+      "category": "Cena",
+      "cuisine": "Italiana",
+      "difficulty": "media",
+      "time": 45,
+      "servings": 3,
+      "status": "bozza",
+      "image": "https://images.unsplash.com/photo-1476124369491-e7addf5db371?auto=format&fit=crop&w=1200&q=80",
+      "description": "Risotto cremoso e autunnale con zucca arrostita, rosmarino e parmigiano.",
+      "ingredients": [
+        "240 g riso carnaroli",
+        "300 g zucca",
+        "brodo vegetale",
+        "rosmarino",
+        "parmigiano"
+      ],
+      "steps": [
+        "Arrostisci la zucca con rosmarino e olio.",
+        "Tosta il riso e cuocilo aggiungendo brodo poco alla volta.",
+        "Manteca con zucca frullata e parmigiano."
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Toast avocado e uovo morbido",
+      "category": "Colazione",
+      "cuisine": "Internazionale",
+      "difficulty": "facile",
+      "time": 15,
+      "servings": 2,
+      "status": "pubblicata",
+      "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=1200&q=80",
+      "description": "Colazione salata veloce con avocado cremoso, pane tostato e uovo dal tuorlo morbido.",
+      "ingredients": [
+        "2 fette di pane integrale",
+        "1 avocado maturo",
+        "2 uova",
+        "succo di limone",
+        "sale, pepe e semi di sesamo"
+      ],
+      "steps": [
+        "Tosta il pane fino a renderlo croccante.",
+        "Schiaccia l'avocado con limone, sale e pepe.",
+        "Cuoci le uova e servi sul toast con semi di sesamo."
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Zuppa di pomodoro arrosto",
+      "category": "Pranzo",
+      "cuisine": "Mediterranea",
+      "difficulty": "facile",
+      "time": 38,
+      "servings": 4,
+      "status": "pubblicata",
+      "image": "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=80",
+      "description": "Una zuppa vellutata con pomodori arrostiti, basilico e crostini croccanti.",
+      "ingredients": [
+        "800 g pomodori maturi",
+        "1 cipolla rossa",
+        "2 spicchi d'aglio",
+        "brodo vegetale",
+        "basilico e crostini"
+      ],
+      "steps": [
+        "Arrostisci pomodori, cipolla e aglio con olio e sale.",
+        "Frulla le verdure con brodo caldo fino a ottenere una crema.",
+        "Servi con basilico fresco e crostini."
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Pollo teriyaki con riso jasmine",
+      "category": "Cena",
+      "cuisine": "Giapponese",
+      "difficulty": "media",
+      "time": 35,
+      "servings": 3,
+      "status": "pubblicata",
+      "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=1200&q=80",
+      "description": "Bocconcini di pollo glassati con salsa teriyaki, serviti con riso e verdure saltate.",
+      "ingredients": [
+        "450 g petto di pollo",
+        "180 g riso jasmine",
+        "salsa di soia",
+        "miele e zenzero",
+        "broccoli o carote"
+      ],
+      "steps": [
+        "Cuoci il riso jasmine in acqua leggermente salata.",
+        "Rosola il pollo a cubetti in padella.",
+        "Aggiungi salsa di soia, miele e zenzero e lascia glassare."
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Gnocchi al pesto di rucola",
+      "category": "Cena",
+      "cuisine": "Italiana",
+      "difficulty": "facile",
+      "time": 24,
+      "servings": 2,
+      "status": "pubblicata",
+      "image": "https://images.unsplash.com/photo-1556761223-4c4282c73f77?auto=format&fit=crop&w=1200&q=80",
+      "description": "Gnocchi cremosi con pesto di rucola, mandorle e parmigiano.",
+      "ingredients": [
+        "400 g gnocchi",
+        "70 g rucola",
+        "30 g mandorle",
+        "40 g parmigiano",
+        "olio extravergine"
+      ],
+      "steps": [
+        "Frulla rucola, mandorle, parmigiano e olio.",
+        "Cuoci gli gnocchi finche salgono a galla.",
+        "Condisci con il pesto e poca acqua di cottura."
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Wrap greco con feta e verdure",
+      "category": "Pranzo",
+      "cuisine": "Greca",
+      "difficulty": "facile",
+      "time": 20,
+      "servings": 2,
+      "status": "pubblicata",
+      "image": "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=1200&q=80",
+      "description": "Wrap fresco e pratico con feta, cetrioli, pomodorini, olive e salsa yogurt.",
+      "ingredients": [
+        "2 piadine o tortillas",
+        "120 g feta",
+        "1 cetriolo",
+        "pomodorini e olive",
+        "yogurt greco e origano"
+      ],
+      "steps": [
+        "Taglia verdure e feta a cubetti.",
+        "Prepara una salsa con yogurt, origano, sale e pepe.",
+        "Farcisci le piadine, arrotola e servi."
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Muffin ai mirtilli e yogurt",
+      "category": "Dessert",
+      "cuisine": "Americana",
+      "difficulty": "media",
+      "time": 42,
+      "servings": 6,
+      "status": "pubblicata",
+      "image": "https://images.unsplash.com/photo-1607958996333-41aef7caefaa?auto=format&fit=crop&w=1200&q=80",
+      "description": "Muffin soffici con yogurt, mirtilli freschi e una superficie leggermente dorata.",
+      "ingredients": [
+        "220 g farina",
+        "120 g yogurt",
+        "2 uova",
+        "100 g mirtilli",
+        "lievito e zucchero"
+      ],
+      "steps": [
+        "Mescola ingredienti secchi e ingredienti liquidi separatamente.",
+        "Unisci i composti senza lavorarli troppo.",
+        "Aggiungi i mirtilli e cuoci negli stampi da muffin."
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Shakshuka speziata",
+      "category": "Colazione",
+      "cuisine": "Mediorientale",
+      "difficulty": "media",
+      "time": 30,
+      "servings": 2,
+      "status": "pubblicata",
+      "image": "https://images.unsplash.com/photo-1590412200988-a436970781fa?auto=format&fit=crop&w=1200&q=80",
+      "description": "Uova cotte in salsa di pomodoro speziata con peperoni, cumino e paprika.",
+      "ingredients": [
+        "4 uova",
+        "400 g pomodori pelati",
+        "1 peperone rosso",
+        "cumino e paprika",
+        "prezzemolo fresco"
+      ],
+      "steps": [
+        "Cuoci peperone e spezie in padella con poco olio.",
+        "Aggiungi i pomodori e lascia restringere la salsa.",
+        "Apri le uova nella salsa e cuoci con coperchio."
+      ]
+    },
+    {
+      "id": 16,
+      "title": "Salmone al forno con patate novelle",
+      "category": "Cena",
+      "cuisine": "Nordica",
+      "difficulty": "media",
+      "time": 48,
+      "servings": 3,
+      "status": "pubblicata",
+      "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=1200&q=80",
+      "description": "Filetti di salmone profumati al limone con patate novelle ed erbe aromatiche.",
+      "ingredients": [
+        "3 filetti di salmone",
+        "500 g patate novelle",
+        "1 limone",
+        "aneto o prezzemolo",
+        "olio, sale e pepe"
+      ],
+      "steps": [
+        "Condisci le patate e infornale finche iniziano a dorare.",
+        "Aggiungi il salmone con limone ed erbe.",
+        "Completa la cottura e servi con il fondo di cottura."
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Crostata rustica alle mele",
+      "category": "Dessert",
+      "cuisine": "Italiana",
+      "difficulty": "avanzata",
+      "time": 70,
+      "servings": 8,
+      "status": "pubblicata",
+      "image": "https://images.unsplash.com/photo-1562007908-859b4ba9a1a2?auto=format&fit=crop&w=1200&q=80",
+      "description": "Dolce casalingo con frolla friabile, mele sottili, cannella e confettura.",
+      "ingredients": [
+        "300 g farina",
+        "150 g burro",
+        "100 g zucchero",
+        "3 mele",
+        "cannella e confettura di albicocche"
+      ],
+      "steps": [
+        "Prepara la frolla e lasciala riposare in frigo.",
+        "Stendi la base e farcisci con confettura e mele.",
+        "Cuoci finche la crostata e dorata e lascia raffreddare."
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Ramen vegetariano con funghi",
+      "category": "Cena",
+      "cuisine": "Giapponese",
+      "difficulty": "avanzata",
+      "time": 60,
+      "servings": 2,
+      "status": "pubblicata",
+      "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=1200&q=80",
+      "description": "Ramen ricco con brodo aromatico, noodles, funghi, uovo e cipollotto.",
+      "ingredients": [
+        "200 g noodles",
+        "700 ml brodo vegetale",
+        "funghi shiitake o champignon",
+        "2 uova",
+        "salsa di soia e cipollotto"
+      ],
+      "steps": [
+        "Prepara un brodo saporito con soia e funghi.",
+        "Cuoci noodles e uova separatamente.",
+        "Componi le ciotole con brodo caldo, noodles, uovo e cipollotto."
+      ]
+    },
+    {
+      "title": "Spaghetti alla Carbonara",
+      "category": "Pranzo",
+      "cuisine": "Italiana",
+      "difficulty": "media",
+      "time": 25,
+      "servings": 4,
+      "status": "pubblicata",
+      "image": "https://images.unsplash.com/photo-1608756687911-aa1599ab3bd9?auto=format&fit=crop&w=1200&q=80",
+      "description": "Un grande classico della cucina romana: spaghetti cremosi con guanciale croccante, uova, pecorino romano e pepe nero.",
+      "ingredients": [
+        "360 g spaghetti",
+        "180 g guanciale",
+        "4 tuorli",
+        "80 g pecorino romano grattugiato",
+        "pepe nero q.b.",
+        "sale q.b."
+      ],
+      "steps": [
+        "Taglia il guanciale a listarelle e rosolalo in padella senza aggiungere olio, finché diventa dorato e croccante.",
+        "Cuoci gli spaghetti in abbondante acqua salata e scolali al dente, conservando un po' di acqua di cottura.",
+        "In una ciotola mescola i tuorli con il pecorino romano e abbondante pepe nero fino a ottenere una crema.",
+        "Unisci gli spaghetti al guanciale fuori dal fuoco e aggiungi la crema di uova e pecorino.",
+        "Mescola rapidamente aggiungendo poca acqua di cottura se necessario, fino a ottenere una consistenza cremosa.",
+        "Servi subito con altro pecorino e pepe nero."
+      ],
+      "id": 19
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "email": "foodie@example.com",
+      "password": "foodie123",
+      "name": "Giulia",
+      "role": "user",
+      "isOnline": false,
+      "registeredAt": "2026-05-30",
+      "bio": "Appassionata di ricette semplici, veloci e mediterranee."
+    },
+    {
+      "id": 2,
+      "email": "admin@example.com",
+      "password": "admin123",
+      "name": "Marco",
+      "role": "admin",
+      "isOnline": false,
+      "registeredAt": "2026-05-30",
+      "bio": "Chef admin di RecipeLab, coordino il catalogo e curo la qualità delle ricette."
+    },
+    {
+      "name": "Gian",
+      "email": "gian@example.com",
+      "password": "prova123",
+      "role": "user",
+      "isOnline": false,
+      "registeredAt": "2026-06-01",
+      "id": 3,
+      "bio": ""
+    }
+  ],
+  "reviews": [
+    {
+      "recipeId": 9,
+      "userEmail": "foodie@example.com",
+      "rating": 4,
+      "content": "facile e veloce!",
+      "createdAt": "2026-05-31",
+      "id": 3
+    },
+    {
+      "recipeId": 18,
+      "userEmail": "foodie@example.com",
+      "rating": 5,
+      "content": "buonissima!!!",
+      "createdAt": "2026-05-31",
+      "id": 4
+    },
+    {
+      "recipeId": 2,
+      "userEmail": "foodie@example.com",
+      "rating": 4,
+      "content": "gustosa!",
+      "createdAt": "2026-06-06",
+      "id": 5
+    }
+  ],
+  "mealPlans": [
+    {
+      "id": 1,
+      "userEmail": "foodie@example.com",
+      "planDate": "2026-06-01",
+      "breakfastId": 3,
+      "lunchId": 4,
+      "dinnerId": 6,
+      "notes": "Preparare ceci e curry in anticipo per risparmiare tempo."
+    },
+    {
+      "userEmail": "foodie@example.com",
+      "planDate": "2026-06-03",
+      "breakfastId": 7,
+      "lunchId": 10,
+      "dinnerId": 12,
+      "notes": "prova",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "userEmail": "foodie@example.com",
+      "planDate": "2026-06-04",
+      "breakfastId": 12,
+      "lunchId": 16,
+      "dinnerId": 18,
+      "notes": "prova"
+    }
+  ],
+  "favorites": [
+    {
+      "id": 1,
+      "userEmail": "foodie@example.com",
+      "recipeId": 1,
+      "createdAt": "2026-05-30"
+    },
+    {
+      "id": 2,
+      "userEmail": "foodie@example.com",
+      "recipeId": 3,
+      "createdAt": "2026-05-30"
+    },
+    {
+      "userEmail": "foodie@example.com",
+      "recipeId": 2,
+      "createdAt": "2026-06-06",
+      "id": 3
+    }
+  ]
+}

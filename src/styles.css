@@ -1,0 +1,1530 @@
+/*
+  STILI CUSTOM DEL PROGETTO - RECIPELAB
+
+  Indice rapido:
+  01. Variabili globali e reset
+  02. Override Bootstrap e componenti base
+  03. Form, tabelle, alert e bottoni custom
+  04. Layout generale, topbar e navigazione
+  05. Hero, intestazioni e pannelli
+  06. Form layout, login e filtri
+  07. Ricette: griglia, carosello, card e dettaglio
+  08. Recensioni, dashboard, profilo e bio
+  09. Piano giornaliero
+  10. Area admin, tabelle e azioni
+  11. Scheda dettaglio utente admin
+  12. Responsive: tablet, mobile, navbar e carosello
+
+  Bootstrap viene importato in main.jsx. Questo file personalizza colori,
+  layout e dettagli grafici del progetto. I commenti di sezione servono per
+  trovare rapidamente l'area da modificare durante manutenzione o ripasso.
+*/
+
+/* 01. Variabili globali: palette, font e colori riutilizzati in tutto il progetto. */
+:root {
+  color: #2d211b;
+  background: #fff8ef;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  --accent: #d3542f;
+  --accent-dark: #9d341b;
+  --cream: #fff8ef;
+  --sage: #6f8a63;
+  --sage-soft: #edf3e7;
+  --ink: #2d211b;
+  --muted: #77675d;
+  --panel: #ffffff;
+  --line: #eadfd2;
+  --danger: #b42318;
+  --success: #3f7a4b;
+}
+
+/* Reset base: evita calcoli di larghezza imprevisti nei layout. */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+a {
+  color: var(--accent-dark);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* 02. Override Bootstrap: bottoni principali, varianti e card base. */
+.btn {
+  --bs-btn-border-radius: 8px;
+  --bs-btn-font-weight: 800;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  letter-spacing: 0;
+  min-height: 42px;
+  text-decoration: none;
+}
+
+.btn.btn-sm {
+  min-height: 36px;
+  padding: 0.45rem 0.75rem;
+}
+
+.btn.btn-primary {
+  --bs-btn-bg: var(--accent);
+  --bs-btn-border-color: var(--accent);
+  --bs-btn-color: #ffffff;
+  --bs-btn-hover-bg: var(--accent-dark);
+  --bs-btn-hover-border-color: var(--accent-dark);
+  --bs-btn-hover-color: #ffffff;
+  --bs-btn-active-bg: var(--accent-dark);
+  --bs-btn-active-border-color: var(--accent-dark);
+}
+
+.btn.btn-outline-secondary,
+.btn.ghost-link,
+.btn.ghost-button {
+  --bs-btn-bg: #ffffff;
+  --bs-btn-border-color: var(--line);
+  --bs-btn-color: var(--ink);
+  --bs-btn-hover-bg: var(--sage-soft);
+  --bs-btn-hover-border-color: #d7e5cf;
+  --bs-btn-hover-color: var(--ink);
+  --bs-btn-active-bg: var(--sage-soft);
+  --bs-btn-active-border-color: #d7e5cf;
+}
+
+.btn.btn-outline-light {
+  --bs-btn-bg: rgba(255, 255, 255, 0.92);
+  --bs-btn-border-color: rgba(255, 255, 255, 0.88);
+  --bs-btn-color: var(--ink);
+  --bs-btn-hover-bg: var(--sage-soft);
+  --bs-btn-hover-border-color: var(--sage-soft);
+  --bs-btn-hover-color: var(--ink);
+}
+
+.btn.btn-success,
+.btn.active {
+  --bs-btn-bg: var(--sage);
+  --bs-btn-border-color: var(--sage);
+  --bs-btn-color: #ffffff;
+  --bs-btn-hover-bg: #58724e;
+  --bs-btn-hover-border-color: #58724e;
+  --bs-btn-hover-color: #ffffff;
+}
+
+.btn.btn-danger,
+.btn.danger {
+  --bs-btn-bg: var(--danger);
+  --bs-btn-border-color: var(--danger);
+  --bs-btn-color: #ffffff;
+  --bs-btn-hover-bg: #8f1c14;
+  --bs-btn-hover-border-color: #8f1c14;
+  --bs-btn-hover-color: #ffffff;
+}
+
+.card {
+  --bs-card-bg: var(--panel);
+  --bs-card-border-color: var(--line);
+  --bs-card-border-radius: 8px;
+  color: var(--ink);
+}
+
+.shadow-sm {
+  box-shadow: 0 18px 50px rgba(82, 48, 25, 0.07) !important;
+}
+
+.form-control,
+.form-select {
+  background-color: #fffdfa;
+  border-color: var(--line);
+  border-radius: 8px;
+  color: var(--ink);
+  font: inherit;
+  margin-top: 0.35rem;
+  padding: 0.7rem 0.8rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+  background-color: #fffdfa;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 0.2rem #f8d8cb;
+  color: var(--ink);
+}
+
+/* Tabelle Bootstrap: colori e padding delle tabelle usate nel progetto. */
+.table {
+  --bs-table-bg: transparent;
+  --bs-table-color: var(--ink);
+  --bs-table-border-color: var(--line);
+  --bs-table-hover-bg: #fffdfa;
+  margin-bottom: 0;
+}
+
+.table > :not(caption) > * > * {
+  padding: 0.9rem;
+}
+
+.alert.alert-danger {
+  background: #fff1ee;
+  border-color: #f0b8ad;
+  color: var(--danger);
+}
+
+.alert.alert-success {
+  background: var(--sage-soft);
+  border-color: #d7e5cf;
+  color: var(--success);
+}
+
+/* 03. Bottoni custom: link-bottone, pulsanti ghost e stati hover/disabled. */
+button,
+.button-link,
+.ghost-link {
+  align-items: center;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  font: inherit;
+  font-weight: 800;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0.65rem 1rem;
+  text-decoration: none;
+}
+
+button,
+.button-link {
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  color: white;
+}
+
+button:hover,
+.button-link:hover {
+  background: var(--accent-dark);
+  text-decoration: none;
+}
+
+button:disabled {
+  background: #cdbfb3;
+  border-color: #cdbfb3;
+  cursor: not-allowed;
+}
+
+.ghost-link,
+.ghost-button {
+  background: white;
+  border: 1px solid var(--line);
+  color: var(--ink);
+}
+
+.ghost-link:hover,
+.ghost-button:hover {
+  background: var(--sage-soft);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+/* Campi form nativi: input, select e textarea coerenti con la palette RecipeLab. */
+input,
+select,
+textarea {
+  background: #fffdfa;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--ink);
+  font: inherit;
+  margin-top: 0.35rem;
+  padding: 0.7rem 0.8rem;
+  width: 100%;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--accent);
+  outline: 3px solid #f8d8cb;
+}
+
+label {
+  color: var(--ink);
+  display: block;
+  font-weight: 800;
+}
+
+/* Tabelle HTML native: larghezza minima e bordi per celle e intestazioni. */
+table {
+  border-collapse: collapse;
+  min-width: 760px;
+  width: 100%;
+}
+
+td,
+th {
+  border-bottom: 1px solid var(--line);
+  padding: 0.9rem;
+  text-align: left;
+}
+
+th {
+  color: var(--muted);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+}
+
+/* 04. Layout generale: contenitore app, topbar, brand, menu e area utente. */
+.app-shell {
+  min-height: 100vh;
+}
+
+.topbar {
+  align-items: center;
+  background: rgba(255, 253, 250, 0.96);
+  border-bottom: 1px solid var(--line);
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: auto 1fr auto;
+  padding: 1rem clamp(1rem, 4vw, 3rem);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.brand {
+  color: var(--ink);
+  font-size: 1.15rem;
+  letter-spacing: 0;
+}
+
+.brand::before {
+  background: var(--accent);
+  border-radius: 999px;
+  content: "";
+  display: inline-block;
+  height: 0.75rem;
+  margin-right: 0.45rem;
+  width: 0.75rem;
+}
+
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  justify-content: center;
+}
+
+.main-nav a {
+  border-radius: 8px;
+  color: var(--muted);
+  padding: 0.55rem 0.75rem;
+}
+
+.main-nav a.active,
+.main-nav a:hover {
+  background: var(--sage-soft);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.user-area {
+  align-items: center;
+  display: flex;
+  gap: 0.6rem;
+  justify-content: flex-end;
+}
+
+/* Pillole informative: ruolo utente, tag ricette, metadati e quick facts. */
+.role-pill,
+.tag-list span,
+.card-meta span,
+.quick-facts span {
+  background: var(--sage-soft);
+  border: 1px solid #d7e5cf;
+  border-radius: 999px;
+  color: #405d38;
+  display: inline-flex;
+  font-size: 0.84rem;
+  font-weight: 800;
+  padding: 0.2rem 0.65rem;
+}
+
+/* Contenuto principale: larghezza massima e padding responsive. */
+.main-content {
+  margin: 0 auto;
+  max-width: 1180px;
+  padding: clamp(1.25rem, 4vw, 3rem);
+}
+
+/* 05. Hero homepage: immagine, overlay e testo introduttivo. */
+.hero {
+  align-items: end;
+  background:
+    linear-gradient(90deg, rgba(45, 33, 27, 0.75), rgba(45, 33, 27, 0.18)),
+    url("https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1600&q=80")
+      center/cover;
+  border-radius: 8px;
+  color: white;
+  display: flex;
+  min-height: min(620px, 72vh);
+  overflow: hidden;
+  padding: clamp(1.5rem, 5vw, 4rem);
+}
+
+.hero-copy {
+  max-width: 720px;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 6vw, 5.7rem);
+  line-height: 0.98;
+  margin: 0.2rem 0 1rem;
+}
+
+.hero p {
+  font-size: 1.12rem;
+  max-width: 660px;
+}
+
+.hero .eyebrow {
+  color: #ffe0c9;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.2rem;
+}
+
+/* Intestazioni pagina/sezione: titoli, sottotitoli ed eyebrow. */
+.page-header,
+.section-heading {
+  margin-bottom: 1.5rem;
+  max-width: 850px;
+}
+
+.carousel-heading {
+  align-items: end;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  max-width: none;
+}
+
+.page-header h1,
+.section-heading h2 {
+  color: var(--ink);
+  font-size: clamp(2rem, 4vw, 3.35rem);
+  line-height: 1.05;
+  margin: 0.2rem 0 0.8rem;
+}
+
+.page-header p {
+  color: var(--muted);
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.eyebrow {
+  color: var(--accent-dark);
+  font-size: 0.78rem;
+  font-weight: 900;
+  margin: 0 0 0.4rem;
+  text-transform: uppercase;
+}
+
+/* Pannelli riutilizzabili: card bianche con bordo, ombra e padding. */
+.panel,
+.recipe-card,
+.stat-card,
+.table-panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 18px 50px rgba(82, 48, 25, 0.07);
+  padding: 1.25rem;
+}
+
+.panel h2,
+.recipe-card h2,
+.stat-card h2,
+.table-panel h2 {
+  margin-top: 0;
+}
+
+/* 06. Layout a griglia: login, dettagli ricetta e profilo/piano giornaliero. */
+.auth-layout,
+.detail-layout,
+.profile-layout {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1.1fr 0.9fr;
+}
+
+/* Form layout: stack verticale, griglia a due colonne e azioni. */
+.form-stack {
+  display: grid;
+  gap: 1rem;
+}
+
+.form-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-bottom: 1.25rem;
+}
+
+.full-row {
+  grid-column: 1 / -1;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.small-button {
+  min-height: 36px;
+  padding: 0.45rem 0.75rem;
+}
+
+button.active,
+.small-button.active {
+  background: var(--sage);
+  border-color: var(--sage);
+}
+
+.text-button {
+  background: transparent;
+  border: 0;
+  color: var(--accent-dark);
+  min-height: auto;
+  padding: 0;
+}
+
+.danger,
+.text-button.danger {
+  background: var(--danger);
+  border-color: var(--danger);
+  color: white;
+}
+
+.text-button.danger {
+  background: transparent;
+  color: var(--danger);
+}
+
+.field-error,
+.alert.error {
+  color: var(--danger);
+  font-size: 0.9rem;
+  font-weight: 800;
+  margin: 0.35rem 0 0;
+}
+
+.alert {
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+}
+
+.alert.success {
+  background: var(--sage-soft);
+  color: var(--success);
+}
+
+/* Login/registrazione: centratura del form e header dedicato. */
+.auth-layout-centered {
+  grid-template-columns: minmax(280px, 520px);
+  justify-content: center;
+}
+
+.login-header {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.login-header .page-header {
+  max-width: 620px;
+}
+
+/* Filtri catalogo: ricerca, categoria, difficoltà e barra strumenti. */
+.filters-bar {
+  align-items: end;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 180px 180px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.search-form {
+  align-items: end;
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: 1fr auto;
+}
+
+/* 07. Ricette: griglia catalogo e carosello homepage. */
+.recipe-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.recipe-carousel {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.recipe-carousel /* Card ricetta: struttura flex per tenere tempo/porzioni allineati in basso. */
+.recipe-card {
+  animation: carousel-card-in 260ms ease;
+  min-height: 100%;
+}
+
+.carousel-controls {
+  flex-shrink: 0;
+}
+
+/* Animazione card carosello: ingresso leggero quando cambia slide. */
+@keyframes carousel-card-in {
+  from {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.recipe-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  padding: 0;
+}
+
+.recipe-card img {
+  aspect-ratio: 16 / 9;
+  display: block;
+  height: auto;
+  object-fit: cover;
+  width: 100%;
+}
+
+.recipe-card-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding: 1rem;
+}
+
+.recipe-card h2 {
+  font-size: 1.22rem;
+  margin-bottom: 0;
+}
+
+.recipe-card p {
+  color: var(--muted);
+  margin: 0;
+}
+
+.card-meta,
+.card-footer,
+.card-actions,
+.quick-facts {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+
+.card-actions {
+  border-top: 1px solid var(--line);
+  padding-top: 0.75rem;
+}
+
+.card-footer {
+  color: var(--muted);
+  justify-content: flex-start;
+  margin-top: auto;
+}
+
+/* Paginazione: controlli precedente/successiva. */
+.pagination {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.25rem;
+}
+
+/* Dettaglio ricetta: immagine, colonne ingredienti e preparazione. */
+.recipe-detail {
+  display: grid;
+  gap: 1rem;
+}
+
+.recipe-detail img {
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.recipe-columns {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 0.8fr 1.2fr;
+}
+
+.recipe-columns ul,
+.recipe-columns ol {
+  padding-left: 1.2rem;
+}
+
+/* 08. Recensioni: lista commenti e card nota. */
+.reviews-list {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.note-card {
+  background: #fffdfa;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.9rem;
+}
+
+.note-card p {
+  margin: 0.35rem 0;
+}
+
+.note-card small {
+  color: var(--muted);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Dashboard: griglia statistiche e pannelli riepilogativi. */
+.dashboard-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.stat-card span {
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.stat-card strong {
+  color: var(--ink);
+  display: block;
+  font-size: 2rem;
+  margin: 0.35rem 0;
+}
+
+.stat-card p {
+  color: var(--muted);
+  margin: 0;
+}
+
+.wide-panel {
+  grid-column: 1 / -1;
+}
+
+/* Profilo dashboard: avatar, dati utente, stato online/offline. */
+.profile-card {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.profile-main {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+}
+
+.profile-avatar,
+.profile-avatar-placeholder {
+  border-radius: 50%;
+  flex-shrink: 0;
+  height: 68px;
+  width: 68px;
+}
+
+.profile-avatar {
+  object-fit: cover;
+}
+
+.profile-avatar-placeholder {
+  align-items: center;
+  background: var(--sage-soft);
+  border: 1px solid #d7e5cf;
+  color: var(--ink);
+  display: flex;
+  font-size: 1.6rem;
+  font-weight: 900;
+  justify-content: center;
+}
+
+.profile-card h2 {
+  margin-bottom: 0;
+}
+
+.profile-date {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin: 0.35rem 0 0;
+}
+
+.profile-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: flex-end;
+}
+
+.profile-meta span,
+.online-status,
+.offline-status {
+  background: #fffdfa;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink);
+  display: inline-flex;
+  font-weight: 800;
+  padding: 0.35rem 0.75rem;
+}
+
+.online-status {
+  background: var(--sage-soft);
+  border-color: #d7e5cf;
+  color: #405d38;
+}
+
+.offline-status {
+  background: #fff1ee;
+  border-color: #f0b8ad;
+  color: var(--danger);
+}
+
+/* Tag list: contenitore per etichette e parole chiave. */
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+/* 09. Piano giornaliero: anteprima pasti e slot colazione/pranzo/cena. */
+.planner-preview {
+  align-self: start;
+}
+
+.planner-slot {
+  border-bottom: 1px solid var(--line);
+  display: grid;
+  gap: 0.25rem;
+  padding: 1rem 0;
+}
+
+.planner-slot span {
+  color: var(--muted);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+/* Tabelle responsive: scroll orizzontale interno invece di rompere il layout. */
+.responsive-table {
+  overflow-x: auto;
+}
+
+/* 10. Area admin: sidebar, contenuto e navigazione amministratore. */
+.admin-layout {
+  align-items: start;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 260px minmax(0, 1fr);
+}
+
+.admin-sidebar {
+  position: sticky;
+  top: 6rem;
+}
+
+.admin-sidebar nav,
+.admin-content {
+  display: grid;
+  gap: 1rem;
+}
+
+.admin-sidebar a {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--ink);
+  font-weight: 800;
+  padding: 0.75rem 0.85rem;
+}
+
+.admin-sidebar a.active,
+.admin-sidebar a:hover {
+  background: var(--sage-soft);
+  border-color: #d7e5cf;
+  text-decoration: none;
+}
+
+/* Azioni tabella admin: bottoni modifica, elimina, scheda. */
+.table-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.admin-recipe-actions {
+  min-width: 230px;
+  width: 230px;
+}
+
+.admin-actions-grid {
+  align-items: center;
+  display: grid;
+  gap: 0.3rem;
+  grid-template-columns: 82px 62px 58px;
+  justify-content: flex-end;
+}
+
+.btn.admin-table-button,
+.ghost-link.admin-table-button {
+  border-radius: 6px;
+  font-size: 0.68rem;
+  line-height: 1.1;
+  min-height: 24px;
+  padding: 0.2rem 0.35rem;
+  width: 100%;
+}
+
+.admin-table-placeholder {
+  display: block;
+  height: 24px;
+  width: 82px;
+}
+
+/* Righe azioni: contenitore flessibile per gruppi di bottoni/link. */
+.action-row {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.review-actions {
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+/* Liste dashboard: card rapide con paginazione interna. */
+.dashboard-list {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.dashboard-list > .note-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 390px;
+}
+
+.quick-card-content {
+  flex: 1;
+  overflow: visible;
+}
+
+.reviews-list.quick-card-content {
+  align-content: start;
+  margin-top: 0.75rem;
+  min-height: 230px;
+}
+
+.quick-card-pagination {
+  align-items: center;
+  border-top: 1px solid var(--line);
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 0.8rem;
+}
+
+.quick-card-pagination span {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+/* Liste compatte: preferiti, piani e riepiloghi brevi. */
+.compact-list {
+  display: grid;
+  gap: 0.65rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.compact-list li {
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  gap: 0.75rem;
+  justify-content: space-between;
+  padding-bottom: 0.65rem;
+}
+
+.compact-list li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Gestione recensioni: card usate nelle aree di amministrazione/controllo. */
+.review-manage-card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 0.65rem;
+  padding: 0.85rem;
+}
+
+.review-manage-card:first-child {
+  border-top: 1px solid var(--line);
+}
+
+/* Pagine di servizio: not found e loader. */
+.not-found {
+  max-width: 620px;
+}
+
+.page-loader {
+  padding: 2rem;
+}
+
+/* 12. Responsive base fino a 860px: una colonna e layout più verticale. */
+@media (max-width: 860px) {
+  .topbar {
+    grid-template-columns: 1fr;
+  }
+
+  .main-nav,
+  .user-area {
+    justify-content: flex-start;
+  }
+
+  .auth-layout,
+  .admin-layout,
+  .detail-layout,
+  .profile-layout,
+  .filters-bar,
+  .recipe-grid,
+  .recipe-carousel,
+  .dashboard-grid,
+  .dashboard-list,
+  .recipe-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .carousel-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .search-form,
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .profile-meta {
+    justify-content: flex-start;
+  }
+
+  .pagination {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
+
+.not-found-wrapper {
+  min-height: 70vh;
+}
+
+.not-found {
+  max-width: 600px;
+  width: 100%;
+}
+/* Bio profilo: area modificabile e persistente nel database. */
+.profile-card {
+  flex-wrap: wrap;
+}
+
+.profile-copy {
+  min-width: 0;
+}
+
+.profile-bio {
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 0.75rem;
+  padding-top: 1rem;
+  width: 100%;
+}
+
+.profile-bio-heading,
+.section-heading-row {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: space-between;
+}
+
+.profile-bio-heading h3,
+.section-heading-row h2 {
+  margin: 0;
+}
+
+.profile-bio-text,
+.profile-bio-empty {
+  margin: 0;
+  max-width: 760px;
+}
+
+.profile-bio-empty,
+.bio-counter {
+  color: var(--muted);
+}
+
+.bio-counter {
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-align: right;
+}
+
+/* Link utenti in tabella admin: accesso alla scheda dettaglio. */
+.table-user-link {
+  font-weight: 900;
+}
+
+/* 11. Scheda dettaglio utente admin: avatar, dati, stato e statistiche. */
+.user-detail-card {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  position: relative;
+}
+
+.user-detail-status {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.detail-avatar {
+  height: 86px;
+  width: 86px;
+}
+
+.user-detail-copy p {
+  color: var(--muted);
+  margin: 0.2rem 0;
+}
+
+.user-detail-copy h2 {
+  margin-bottom: 0.2rem;
+}
+
+.user-stats-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media (max-width: 860px) {
+  .user-detail-card {
+    align-items: flex-start;
+    flex-direction: column;
+    padding-top: 3.5rem;
+  }
+
+  .user-detail-status {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .user-stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ------------------------------------------------------------
+   12. RESPONSIVE FIXES FINALI PER TABLET E MOBILE  
+   Queste regole sono in fondo al file per sovrascrivere gli stili precedenti e
+   rendere stabili dashboard, admin, tabelle e form su tablet/cellulare.
+------------------------------------------------------------ */
+html,
+body,
+#root {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+}
+
+.main-content,
+.panel,
+.recipe-card,
+.stat-card,
+.table-panel,
+.admin-content,
+.profile-copy,
+.user-detail-copy,
+.note-card {
+  min-width: 0;
+}
+
+.responsive-table {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.responsive-table table {
+  min-width: 720px;
+}
+
+/* Tablet: evita layout desktop troppo stretti tra 861px e 1100px. */
+@media (max-width: 1100px) {
+  .topbar {
+    grid-template-columns: 1fr;
+    position: static;
+  }
+
+  .main-nav,
+  .user-area {
+    justify-content: flex-start;
+  }
+
+  .admin-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-sidebar {
+    position: static;
+    top: auto;
+  }
+
+  .admin-sidebar nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .admin-sidebar a {
+    flex: 1 1 180px;
+    text-align: center;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dashboard-list {
+    grid-template-columns: 1fr;
+  }
+
+  .recipe-carousel {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .user-stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .profile-card,
+  .section-heading-row,
+  .profile-bio-heading {
+    align-items: flex-start;
+  }
+}
+
+/* Cellulare e tablet piccoli: una sola colonna e bottoni più comodi. */
+@media (max-width: 700px) {
+  .main-content {
+    padding: 1rem;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 2rem 1.25rem;
+  }
+
+  .hero h1,
+  .page-header h1,
+  .section-heading h2 {
+    font-size: clamp(1.85rem, 10vw, 2.45rem);
+  }
+
+  .main-nav,
+  .user-area,
+  .hero-actions,
+  .action-row,
+  .form-actions,
+  .card-actions,
+  .review-actions,
+  .quick-card-pagination {
+    align-items: stretch;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .main-nav a,
+  .user-area > *,
+  .hero-actions > *,
+  .action-row > *,
+  .form-actions > *,
+  .card-actions > *,
+  .review-actions > *,
+  .quick-card-pagination > *,
+  .profile-bio-heading > button,
+  .section-heading-row > .ghost-link {
+    width: 100%;
+  }
+
+  .profile-main {
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .profile-meta {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .profile-meta span,
+  .online-status,
+  .offline-status {
+    justify-content: center;
+  }
+
+  .dashboard-grid,
+  .dashboard-list,
+  .recipe-grid,
+  .recipe-carousel,
+  .recipe-columns,
+  .detail-layout,
+  .profile-layout,
+  .auth-layout,
+  .filters-bar,
+  .search-form,
+  .form-grid,
+  .user-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-list > .note-card {
+    min-height: auto;
+  }
+
+  .compact-list li {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .quick-card-content,
+  .reviews-list.quick-card-content {
+    min-height: 0;
+  }
+
+  .user-detail-card {
+    padding-top: 3.5rem;
+  }
+}
+
+/* Telefoni stretti: riduce padding e larghezze minime delle tabelle. */
+@media (max-width: 480px) {
+  .panel,
+  .recipe-card,
+  .stat-card,
+  .table-panel,
+  .note-card {
+    padding: 1rem;
+  }
+
+  .recipe-card {
+    padding: 0;
+  }
+
+  .profile-main,
+  .user-detail-card {
+    gap: 0.75rem;
+  }
+
+  .profile-avatar,
+  .profile-avatar-placeholder {
+    height: 58px;
+    width: 58px;
+  }
+
+  .detail-avatar {
+    height: 72px;
+    width: 72px;
+  }
+
+  .responsive-table table {
+    min-width: 640px;
+  }
+
+  .admin-actions-grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .admin-table-placeholder {
+    display: none;
+  }
+}
+
+/* ------------------------------------------------------------
+   RESPONSIVE NAVBAR + CAROSELLO + ARCHIVIO RICETTE
+------------------------------------------------------------ */
+/* Navbar responsive: azioni mobile/tablet, pulsante menu e pillola ruolo. */
+.mobile-topbar-actions {
+  display: none;
+}
+
+.mobile-menu-button {
+  white-space: nowrap;
+}
+
+/* Indicatore paginazione archivio ricette: numero elementi per pagina. */
+.table-page-size {
+  background: var(--sage-soft);
+  border: 1px solid #d7e5cf;
+  border-radius: 999px;
+  color: #405d38;
+  display: inline-flex;
+  font-size: 0.84rem;
+  font-weight: 800;
+  padding: 0.25rem 0.7rem;
+}
+
+/* Carosello desktop: tre card visibili. */
+.recipe-carousel {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* Tablet: navbar a scomparsa, sidebar admin collassata e carosello a due card. */
+@media (max-width: 1100px) {
+  .topbar {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    position: sticky;
+    top: 0;
+  }
+
+  .mobile-topbar-actions {
+    align-items: center;
+    display: flex;
+    gap: 0.6rem;
+    justify-content: flex-end;
+  }
+
+  .main-nav,
+  .user-area {
+    display: none;
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+
+  .main-nav.is-open,
+  .user-area.is-open {
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .main-nav.is-open {
+    border-top: 1px solid var(--line);
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+  }
+
+  .main-nav.is-open a,
+  .user-area.is-open > * {
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .desktop-role-pill {
+    display: none;
+  }
+
+  .recipe-carousel {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile: carosello a una card, menù verticale e bottoni più leggibili. */
+@media (max-width: 700px) {
+  .recipe-carousel {
+    grid-template-columns: 1fr;
+  }
+
+  .carousel-controls {
+    width: 100%;
+  }
+
+  .carousel-controls .btn {
+    flex: 1 1 0;
+  }
+
+  .mobile-topbar-actions .role-pill {
+    font-size: 0.78rem;
+    padding: 0.2rem 0.55rem;
+  }
+}
