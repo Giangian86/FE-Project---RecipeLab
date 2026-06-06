@@ -20,8 +20,7 @@ Il progetto è stato realizzato come applicazione React completa, con routing, s
 - [Credenziali di test](#credenziali-di-test)
 - [API locale e database](#api-locale-e-database)
 - [Aspetti tecnici rilevanti](#aspetti-tecnici-rilevanti)
-- [Note per la consegna](#note-per-la-consegna)
-
+- [Possibili sviluppi futuri](#possibili-sviluppi-futuri)
 ---
 
 ## Obiettivo del progetto
